@@ -1,9 +1,9 @@
 import user from '../dataFile/user.json'
-
+import data from '../dataFile/data.json';
 
 
 import { Profile } from './Profile/Profile';
-
+import { Statistics } from './Statistics/Statistics'
 const {
   username,
   tag,
@@ -21,7 +21,8 @@ const {
 
 export const App = () => {
   return (
-    <Profile
+    <div>
+          <Profile
           username={username}
           tag={tag}
           location={location}
@@ -30,5 +31,7 @@ export const App = () => {
           views={views}
           likes={likes}
     />
+    <Statistics title="Upload stats" data={data} />
+</div>
   );
 };
